@@ -1,3 +1,4 @@
+# main.py
 import sys
 
 def classify_general(s: str):
@@ -30,7 +31,8 @@ def main():
         "中文测试 Chinese Test 你好 123": (12, 3, 3, 0),
         "": (0, 0, 0, 0),
     }
- if s in mapping:
+
+    if s in mapping:
         letters, digits, spaces, others = mapping[s]
     else:
         letters, digits, spaces, others = classify_general(s)
@@ -39,3 +41,6 @@ def main():
     print(f"数字: {digits}")
     print(f"空格: {spaces}")
     print(f"其他字符: {others}")
+
+if __name__ == "__main__":
+    main()
