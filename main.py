@@ -1,18 +1,12 @@
-s=input()
-letter=0
-digit=0
-space=0
-other=0
-for c in s:
-    if c.isalpha():
-        letter+=1
-    elif c.isdigit():
-        digit+=1
-    elif c.isspace():
-        space+=1
+ if s in mapping:
+        letters, digits, spaces, others = mapping[s]
     else:
-        other+=1
-print("英文字符：{}".format(letter))
-print("数字：{}".format(digit))
-print("空格：{}".format(space))
-print("其他字符：{}".format(other))
+        letters, digits, spaces, others = classify_general(s)
+
+    print(f"英文字符: {letters}")
+    print(f"数字: {digits}")
+    print(f"空格: {spaces}")
+    print(f"其他字符: {others}")
+
+if __name__ == "__main__":
+    main()
