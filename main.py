@@ -7,6 +7,3 @@
     print(f"数字: {digits}")
     print(f"空格: {spaces}")
     print(f"其他字符: {others}")
-
-if __name__ == "__main__":
-    main()
